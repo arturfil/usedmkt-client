@@ -3,3 +3,27 @@
 <p class="error" *ngIf="errorMessage">
   {{ errorMessage }}
 </p>
+
+<form (ngSubmit)="saveNewItem()">
+  <label for="item-name-input"> New Item Name </label>
+  <input id="item-name-input" type="text"
+  name="itemName" [(ngModel)]="newItem.itemName">
+  <br>
+
+  <label for="item-brand-input"> Brand </label>
+  <input id="item-brand-input" type="text"
+  name="itemBrand" [(ngModel)]="newItem.itemBrand">
+  <br>
+
+  <label for="item-image-input"> Image </label>
+  <input id="item-image-input" type="file" placeholder="upload file"
+  name="itemImage" ng2FileSelect [uploader]="myUploader">
+  <br>
+  <img [src]="newItem.itemImage">
+
+  <label for="item-value-input"> Enter Value </label>
+  <input id="item-value-input" type="text"
+  name="itemValue" [(ngModel)]="newItem.itemValue">
+  <br>
+  <br>
+</form>

@@ -1,12 +1,21 @@
 <nav>
-  <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/signup">Sign Up</a></li>
-    <li><a routerLink="/signup">Log In</a></li>
-    <li><a href="#">Log Out</a></li>
-    <li><a routerLink="/myitems">My Items</a></li>
+  <a routerLink="/"> Our Products </a>
+  <br>
 
-  </ul>
+  <div *ngIf="!userInfo">
+    <a routerLink='/signup'>Sign Up / Login </a>
+    <br>
+
+  </div>
+
+  <div *ngIf="userInfo">
+    <a routerLink="/myItems"> My Inverntory </a>
+    <br>
+
+    <a (click)="logMeOut()"> Log Out </a>
+    <br>
+  </div>
+
 </nav>
 
 <router-outlet></router-outlet>
