@@ -26,7 +26,7 @@ export class AuthApiService {
   postSignup(userInfo: SignupInfo) {
     return (
       this.httpThang.post(
-        this.baseUrl + 'api/process-signup',
+        this.baseUrl + '/api/process-signup',
         userInfo,
         { withCredentials: true }
       )
