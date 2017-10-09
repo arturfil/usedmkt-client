@@ -1,3 +1,11 @@
-<p>
-  item-details works!
-</p>
+<h2> {{ itemInfo.name }}</h2>
+
+<p> Brand or Made: {{ itemInfo.brand }} </p>
+
+<img [src]="imageDomain + itemInfo.image" alt="">
+
+<p> {{ itemInfo.value }}</p>
+
+<button (click)="deleteClick()">
+  Delete Item
+</button>

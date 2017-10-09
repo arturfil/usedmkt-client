@@ -24,7 +24,7 @@ export class ItemApiService {
   // GET/api/items/ID
   getItemDetails(itemId: string) {
     return this.httpThang.get(
-      this.baseUrl + '/api/items' + itemId
+      this.baseUrl + '/api/items/' + itemId
     );
   }
 
@@ -38,7 +38,7 @@ export class ItemApiService {
   }
 
   // DELETE/api/items/ID
-  delete(itemId: string) {
+  deleteItem(itemId: string) {
     return this.httpThang.delete(
       this.baseUrl + '/api/phones/' + itemId,
       { withCredentials: true }
