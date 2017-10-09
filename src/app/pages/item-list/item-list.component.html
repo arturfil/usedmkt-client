@@ -13,15 +13,23 @@
   (newItemNotifier)="handleNewItem($event)"></app-item-form>
 </div>
 
-<ul>
-  <li *ngFor="let oneItem of items">
-    <h3> {{ oneItem.name }}</h3>
-    <span> From {{ oneItem.brand }}</span>
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <ul>
+          <li class="list-card col-md-3" *ngFor="let oneItem of items">
+            <h3> {{ oneItem.name }}</h3>
+            <span> From {{ oneItem.brand }}</span>
 
-    <a [routerLink]="['/items', oneItem._id]">
-      See Details
-    </a>
 
-    <img [src]="imageDomain + oneItem.image">
-  </li>
-</ul>
+            <br>
+            <img [src]="imageDomain + oneItem.image">
+            <br>
+            <a class="see-details" [routerLink]="['/items', oneItem._id]">
+              See Details
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

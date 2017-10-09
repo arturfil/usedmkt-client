@@ -40,7 +40,7 @@ export class ItemApiService {
   // DELETE/api/items/ID
   deleteItem(itemId: string) {
     return this.httpThang.delete(
-      this.baseUrl + '/api/phones/' + itemId,
+      this.baseUrl + '/api/items/' + itemId,
       { withCredentials: true }
     );
   }
