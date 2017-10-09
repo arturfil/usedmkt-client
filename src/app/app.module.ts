@@ -19,6 +19,7 @@ import { ItemDetailsComponent } from './pages/item-details/item-details.componen
 import { ItemListComponent } from './pages/item-list/item-list.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ItemFormComponent } from './components/item-form/item-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ItemFormComponent } from './components/item-form/item-form.component';
     ItemDetailsComponent,
     ItemListComponent,
     SignUpComponent,
-    ItemFormComponent
+    ItemFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
