@@ -14,10 +14,11 @@
 </div>
 
   <div class="container">
+
     <div class="row">
       <div class="">
-        <ul>
-          <li class="list-card col-md-3" *ngFor="let oneItem of items">
+        <ul class="">
+          <li class="list-card col-md-3 col-sm-4" *ngFor="let oneItem of items">
             <h3> {{ oneItem.name }}</h3>
             <span> From {{ oneItem.brand }}</span>
 
@@ -32,4 +33,29 @@
         </ul>
       </div>
     </div>
+    <!-- New Row -->
+
+  <div class="show-items row">
+    <div class="col-md-12">
+      <form class="form-query" (ngSubmit)='querySubmit()' >
+        <label for="search-input"> Search Item Price </label>
+        <br>
+        <input [(ngModel)]="queryInput" type="text" name="search">
+        <br>
+        <br>
+        <button> Search </button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-4">
+      <ul>
+        <li *ngFor="let onePrice of prices">
+          <p>Name: {{ onePrice.name }}</p>
+          <p>Price: ${{ onePrice.salePrice }}</p>
+          <img src="{{ onePrice.mediumImage}}" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
   </div>

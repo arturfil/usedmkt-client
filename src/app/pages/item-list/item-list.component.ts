@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ItemApiService } from '../../services/item-api.service';
 import { AuthApiService } from '../../services/auth-api.service';
+import { WalmartApiService } from '../../services/walmart-api.service';
+
 import { environment } from '../../../environments/environment';
 
 
@@ -16,12 +18,14 @@ export class ItemListComponent implements OnInit {
 
   isFormOn = false;
   items: any[] = [];
-
+  prices: any[];
   userInfo: any;
+  queryInput: any;
 
   constructor(
     private itemThang: ItemApiService,
-    private authThang: AuthApiService
+    private authThang: AuthApiService,
+    private wallThang: WalmartApiService
   ) { }
 
   ngOnInit() {
@@ -53,6 +57,16 @@ export class ItemListComponent implements OnInit {
   handleNewItem(theItem) {
     this.items.unshift(theItem);
     this.isFormOn = false;
+  }
+
+  querySubmit() {
+    console.log(this.queryInput);
+    this.wallThang.getQuery(this.queryInput)
+      .subscribe(
+        (pricesFromApi: any) => {
+          this.prices = pricesFromApi;
+        }
+      )
   }
 
 }

@@ -8,7 +8,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { ItemApiService } from './services/item-api.service';
 import { AuthApiService } from './services/auth-api.service';
 import { NeedsLoginGuardService } from './guards/needs-login-guard.service';
-//missing guards
+import { WalmartApiService } from './services/walmart-api.service';
 
 // components
 import { AppRoutingModule } from './app-routing.module';
@@ -42,6 +42,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   providers: [
     ItemApiService,
     AuthApiService,
+    WalmartApiService,
     NeedsLoginGuardService
   ],
   bootstrap: [AppComponent]

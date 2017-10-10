@@ -4,7 +4,7 @@
   {{ errorMessage }}
 </p>
 
-<form (ngSubmit)="saveNewItem()">
+<form (ngSubmit)="saveNewItem() ">
   <label for="item-name-input"> New Item Name </label>
   <input id="item-name-input" type="text"
   name="itemName" [(ngModel)]="newItem.itemName">
