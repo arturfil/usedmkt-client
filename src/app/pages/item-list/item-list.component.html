@@ -19,16 +19,19 @@
       <div class="">
         <ul class="">
           <li class="list-card col-md-3 col-sm-4" *ngFor="let oneItem of items">
-            <h3> {{ oneItem.name }}</h3>
-            <span> From {{ oneItem.brand }}</span>
 
+            <img [src]="imageDomain + oneItem.image">
+            <br>
+            <h3> {{ oneItem.name }}</h3>
 
             <br>
-            <img [src]="imageDomain + oneItem.image">
+            <span> From {{ oneItem.brand }}</span>
+
             <br>
             <a class="see-details" [routerLink]="['/items', oneItem._id]">
               See Details
             </a>
+
           </li>
         </ul>
       </div>

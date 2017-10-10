@@ -1,4 +1,42 @@
-.form {
-  margin-top: 50px;
+form {
+  padding-top: 40px;
   text-align: center;
+}
+.signup-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 420px;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+}
+.signup-form input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 200px;
+  background: transparent;
+  outline: none;
+}
+.signup-form button {
+  margin-top: 20px;
+  width: 200px;
+  border-color: white;
+  border-radius: 25px;
+  background-color: crimson;
+  color: white;
+  font-size: 15px;
+  height: 40px;
+}
+.signup-form button:hover {
+  background: #efed40;
+}
+#fullname-input {
+  border: none;
+}
+h2 {
+  margin: 50px 0 0 0;
+  padding: 0 0 20px;
+  color: white;
 }

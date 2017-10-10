@@ -14,6 +14,12 @@
               <span class="icon-bar"></span>
             </button>
       <a class="navbar-brand" routerLink="/"> $UsedMtk </a>
+
+      <ul *ngIf="userInfo" class="navbar-nav nav ">
+        <li class="nav-item"><a> Hi, {{ userInfo.fullName }}</a></li>
+
+      </ul>
+
     </div>
     <div class="collapse navbar-collapse" id="my-nav">
       <ul class="navbar-nav nav navbar-right">
