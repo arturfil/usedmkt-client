@@ -8,13 +8,16 @@ import { NeedsLoginGuardService } from './guards/needs-login-guard.service';
 import { ItemListComponent } from './pages/item-list/item-list.component';
 import { ItemDetailsComponent } from './pages/item-details/item-details.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MyItemsComponent } from './pages/my-items/my-items.component';
 
 const routes: Routes = [
 
   { path: '', component: ItemListComponent },
   { path: 'items/:itemId', component: ItemDetailsComponent },
   { path: 'signup', component:SignUpComponent },
-  { path: 'login', component: SignUpComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'myItems', component: MyItemsComponent}
 
 ];
 

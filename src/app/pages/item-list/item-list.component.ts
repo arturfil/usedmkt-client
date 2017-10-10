@@ -56,7 +56,14 @@ export class ItemListComponent implements OnInit {
 
   handleNewItem(theItem) {
     this.items.unshift(theItem);
+    this.wallThang.getQuery(this.queryInput)
+      .subscribe(
+        (pricesFromApi: any) => {
+          this.prices = pricesFromApi
+          }
+        );
     this.isFormOn = false;
+
   }
 
   querySubmit() {

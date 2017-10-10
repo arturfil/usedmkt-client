@@ -1,12 +1,12 @@
-<div class="form container">
+<div class="form ">
   <div class="form-wrapper">
-    <h2>Sign Up</h2>
-
     <p class="error" *ngIf="errorMessage">
       {{ errorMessage }}
     </p>
 
-    <!-- <form class="signup-form"(ngSubmit)="signupSubmit()">
+    <form class="signup-form"(ngSubmit)="signupSubmit()">
+      <h2>Sign Up</h2>
+      <br>
       <label for="full-name-input"> Full Name </label>
       <br>
       <input id="full-name-input" type="text" placeholder="Full Name"
@@ -27,8 +27,9 @@
 
       <button> Sign Up </button>
     </form>
-  </div> -->
-  <div class="fom-wrapper">
+  </div>
+
+  <!-- <div class="form-wrapper">
     <h2> Log In </h2>
     <p class="error" *ngIf="loginError">
       {{ loginError }}
@@ -50,7 +51,7 @@
       <button> Log In </button>
       <br>
       <br>
-      <a routerLink="/signup"> Create Your Accounst </a>
+      <a routerLink="/signup"> Create Your Account </a>
     </form>
   </div>
-</div>
+</div> -->

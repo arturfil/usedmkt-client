@@ -1,27 +1,28 @@
+
 <h3> Add an Item </h3>
 
-<p class="error" *ngIf="errorMessage">
-  {{ errorMessage }}
-</p>
-
-<form (ngSubmit)="saveNewItem() ">
+<form class="signup-form"(ngSubmit)="saveNewItem() ">
   <label for="item-name-input"> New Item Name </label>
+  <br>
   <input id="item-name-input" type="text"
-  name="itemName" [(ngModel)]="newItem.itemName">
+  name="itemName" [(ngModel)]="queryInput" [(ngModel)]="newItem.itemName">
   <br>
 
   <label for="item-brand-input"> Brand </label>
+  <br>
   <input id="item-brand-input" type="text"
   name="itemBrand" [(ngModel)]="newItem.itemBrand">
   <br>
 
   <label for="item-image-input"> Image </label>
-  <input id="item-image-input" type="file" placeholder="upload file"
+  <br>
+  <input class="image-input" id="item-image-input" type="file" placeholder="upload file"
   name="itemImage" ng2FileSelect [uploader]="myUploader">
   <br>
   <img [src]="newItem.itemImage">
 
   <label for="item-value-input"> Enter Value </label>
+  <br>
   <input id="item-value-input" type="text"
   name="itemValue" [(ngModel)]="newItem.itemValue">
   <br>

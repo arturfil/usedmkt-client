@@ -1,3 +1,66 @@
-<p>
-  my-items works!
+<p class="error" *ngIf="errorMessage">
+  {{ errorMessage }}
 </p>
+
+  <h2> Your Inventory </h2>
+
+  <div class="error" *ngIf="errorMessage">
+    <h3> {{ errorMessage }}</h3>
+  </div>
+<br>
+    <!-- <div class="container">
+      <div class="row">
+
+        <div class="add-items-form col-md-3">
+          <button (click)="showsForm()">
+          Add Item
+          </button>
+
+
+          <app-item-form *ngIf="isFormOn"
+          (newItemNotifier)="handleNewItem($event)"></app-item-form>
+        </div>
+
+      </div>
+    </div> -->
+
+
+    <div class="container">
+      <div class="row">
+        <div class="add-items-form col-md-12">
+          <button (click)="showsForm()">
+          Add Item
+          </button>
+
+
+          <app-item-form *ngIf="isFormOn"
+          (newItemNotifier)="handleNewItem($event)"></app-item-form>
+        </div>
+
+        <ul>
+          <li class="col-md-3 col-sm-3 item-card" *ngFor="let oneItem of myItems">
+            <img [src]="imageDomain + oneItem.image" alt="">
+            <h3> {{ oneItem.name}}</h3>
+            <p> From {{ oneItem.brand}}</p>
+            <a [routerLink]="['/items', oneItem._id]">
+              See Details
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="row">
+
+        <div class="">
+          <ul>
+            <li class="col-md-3 col-sm-3" *ngFor="let onePrice of prices">
+              <p>Name: {{ onePrice.name }}</p>
+              <p>Price: ${{ onePrice.salePrice }}</p>
+              <img src="{{ onePrice.mediumImage}}" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>

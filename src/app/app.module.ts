@@ -20,6 +20,7 @@ import { ItemListComponent } from './pages/item-list/item-list.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ItemFormComponent } from './components/item-form/item-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ItemListComponent,
     SignUpComponent,
     ItemFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

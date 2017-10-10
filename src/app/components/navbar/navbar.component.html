@@ -16,17 +16,17 @@
       <a class="navbar-brand" routerLink="/"> $UsedMtk </a>
 
       <ul *ngIf="userInfo" class="navbar-nav nav ">
-        <li class="nav-item"><a> Hi, {{ userInfo.fullName }}</a></li>
-
+        <li class="nav-item name"><p> Hello, {{ userInfo.fullName }}</p></li>
       </ul>
 
     </div>
+
     <div class="collapse navbar-collapse" id="my-nav">
       <ul class="navbar-nav nav navbar-right">
         <li class="nav-item"><a routerLink="/"> Home </a></li>
 
-        <li class="nav-item"><a *ngIf="!userInfo" routerLink='/signup'>Sign-Up </a></li>
-        <li class="nav-item"><a *ngIf="!userInfo" routerLink='/signup'>Login </a></li>
+        <!-- <li class="nav-item"><a *ngIf="!userInfo" routerLink='/signup'>Sign-Up </a></li> -->
+        <li class="nav-item"><a *ngIf="!userInfo" routerLink='/login'>Login </a></li>
 
 
         <li class="nav-item"><a *ngIf="userInfo" routerLink="/myItems"> My Inverntory </a></li>

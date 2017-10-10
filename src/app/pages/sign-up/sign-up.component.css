@@ -11,6 +11,7 @@ form {
   height: 420px;
   box-sizing: border-box;
   border: 1px solid lightgrey;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .signup-form input {
   border: none;
@@ -36,7 +37,14 @@ form {
   border: none;
 }
 h2 {
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0 0 20px;
-  color: white;
+  color: black;
+}
+.error {
+  margin-top: 60px;
+  padding: 10px 20px;
+  color: crimson;
+  border: 2px solid crimson;
+  border-radius: 3px;
 }

@@ -1,9 +1,9 @@
-<div class="item-list" *ngIf="userInfo">
+<!-- <div class="item-list" *ngIf="userInfo">
   <p> Hi {{ userInfo.fullName }}</p>
-</div>
+</div> -->
 
-<h2> Products </h2>
-<div *ngIf="userInfo">
+<h2> Featured Products </h2>
+<!-- <div *ngIf="userInfo">
   <button (click)="showsForm()">
     Add Item
   </button>
@@ -11,7 +11,7 @@
 
   <app-item-form *ngIf="isFormOn"
   (newItemNotifier)="handleNewItem($event)"></app-item-form>
-</div>
+</div> -->
 
   <div class="container">
 
@@ -51,9 +51,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3 col-sm-4">
+    <div >
       <ul>
-        <li *ngFor="let onePrice of prices">
+        <li class="col-md-3 col-sm-4" *ngFor="let onePrice of prices">
           <p>Name: {{ onePrice.name }}</p>
           <p>Price: ${{ onePrice.salePrice }}</p>
           <img src="{{ onePrice.mediumImage}}" alt="">
