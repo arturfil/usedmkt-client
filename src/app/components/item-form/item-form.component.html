@@ -5,7 +5,7 @@
   <label for="item-name-input"> New Item Name </label>
   <br>
   <input id="item-name-input" type="text"
-  name="itemName" [(ngModel)]="queryInput" [(ngModel)]="newItem.itemName">
+  name="itemName" (keydown)="getQuery(queryInput)" [(ngModel)]="queryInput"[(ngModel)]="newItem.itemName">
   <br>
 
   <label for="item-brand-input"> Brand </label>

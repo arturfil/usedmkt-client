@@ -21,7 +21,6 @@ export class MyItemsComponent implements OnInit {
 
 
   myItems: any[] = [];
-  items: any[] = [];
   isFormOn = false;
   userInfo: any;
   prices: any;
@@ -56,9 +55,9 @@ export class MyItemsComponent implements OnInit {
     }
   }
 
-  handleNewItem(theItem) {
-    this.items.unshift(theItem);
-    this.wallThang.getQuery(this.queryInput)
+  handleNewItem(submissionInfo) {
+    this.myItems.unshift(submissionInfo.item);
+    this.wallThang.getQuery(submissionInfo.queryInput)
       .subscribe(
         (pricesFromApi: any) => {
           this.prices = pricesFromApi

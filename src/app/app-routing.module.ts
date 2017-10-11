@@ -10,6 +10,7 @@ import { ItemDetailsComponent } from './pages/item-details/item-details.componen
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MyItemsComponent } from './pages/my-items/my-items.component';
+import { AccountComponent } from './pages/account/account.component';
 
 const routes: Routes = [
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'items/:itemId', component: ItemDetailsComponent },
   { path: 'signup', component:SignUpComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'myItems', component: MyItemsComponent}
+  { path: 'myItems', component: MyItemsComponent},
+  { path: 'account', component: AccountComponent}
 
 ];
 

@@ -1,0 +1,16 @@
+<p>
+  account works!
+</p>
+
+<form (click)="showStripe">
+  <label for="">Stripe</label>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_nuCrlciTxrzNBPXHtArKSvnC"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>

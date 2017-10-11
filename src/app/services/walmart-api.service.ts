@@ -19,7 +19,7 @@ export class WalmartApiService {
 
   getQuery(queryTerm: string) {
     return this.httpThang.get(
-      this.baseUrl + '/api/prices/' + queryTerm 
+      this.baseUrl + '/api/prices/' + queryTerm
     );
   }
 

@@ -5,6 +5,7 @@ import { FileUploader } from 'ng2-file-upload';
 import { ItemInfo } from '../../interfaces/item-info';
 //import services
 import { ItemApiService } from '../../services/item-api.service';
+import { WalmartApiService } from '../../services/walmart-api.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -27,6 +28,7 @@ export class ItemFormComponent implements OnInit {
     itemImage: '',
     itemValue: 0
   }
+  queryInput: string;
   errorMessage: string;
 
   //notifies the parent when a new phone is succesfully added
@@ -59,7 +61,10 @@ export class ItemFormComponent implements OnInit {
       console.log('New item success', fullItemDetails);
 
       // notify the parent about the new item through the output
-      this.newItemNotifier.emit(fullItemDetails);
+      this.newItemNotifier.emit({
+        item: fullItemDetails,
+        queryInput: this.queryInput
+      });
 
       this.errorMessage = '';
       this.newItem = {
@@ -86,7 +91,10 @@ export class ItemFormComponent implements OnInit {
       .subscribe(
         (fullItemDetails) => {
           console.log('New phone success', fullItemDetails);
-          this.newItemNotifier.emit(fullItemDetails);
+          this.newItemNotifier.emit({
+            item: fullItemDetails,
+            queryInput: this.queryInput
+          });
 
           this.errorMessage = '';
           this.newItem = {
