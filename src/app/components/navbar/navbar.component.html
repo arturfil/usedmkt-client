@@ -23,14 +23,15 @@
 
     <div class="collapse navbar-collapse" id="my-nav">
       <ul class="navbar-nav nav navbar-right">
-        <li class="nav-item"><a routerLink="/"> Home </a></li>
+        <li class="link nav-item"><a routerLink="/"> Home </a></li>
 
         <!-- <li class="nav-item"><a *ngIf="!userInfo" routerLink='/signup'>Sign-Up </a></li> -->
-        <li class="nav-item"><a *ngIf="!userInfo" routerLink='/login'>Login </a></li>
+        <li class="link nav-item"><a *ngIf="!userInfo" routerLink='/login'>Login </a></li>
 
 
-        <li class="nav-item"><a *ngIf="userInfo" routerLink="/myItems"> My Inventory </a></li>
-        <li class="nav-item"><a *ngIf="userInfo" href=""(click)="logMeOut()"> Log Out </a></li>
+        <li class="link nav-item"><a *ngIf="userInfo" routerLink="/myItems"> My Inventory </a></li>
+        <li class="link nav-item"><a *ngIf="userInfo" routerLink="/account"> My Account </a></li>        
+        <li class="link nav-item"><a *ngIf="userInfo" href=""(click)="logMeOut()"> Log Out </a></li>
       </ul>
     </div>
   </div>

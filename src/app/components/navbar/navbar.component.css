@@ -1,5 +1,5 @@
 nav {
-  background-color: crimson;
+  background-color: #411D39;
   color: white;
 }
 
@@ -13,4 +13,13 @@ nav a {
 .name {
   margin-left: 15px;
   margin-top: 16px;
+}
+.link a {
+  color: lightgrey;
+}
+.link a:hover {
+  color: white;
+}
+.link a:visited {
+  color: white;
 }

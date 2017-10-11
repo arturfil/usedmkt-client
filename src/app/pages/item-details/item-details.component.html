@@ -1,11 +1,24 @@
-<h2> {{ itemInfo.name }}</h2>
+<div class="details container">
+  <div class="row">
 
-<p> Brand or Made: {{ itemInfo.brand }} </p>
+    <div class="img col-md-6 col-sm-12">
+      <img [src]="imageDomain + itemInfo.image" alt="">
+    </div>
 
-<img [src]="imageDomain + itemInfo.image" alt="">
+    <div class="info col-md-6 col-sm-12">
+      <h2> {{ itemInfo.name }}</h2>
+      <p> Brand or Made: {{ itemInfo.brand }} </p>
+      <p> ${{ itemInfo.value }}.00</p>
+      <h3>Description: </h3>
+      <button (click)="deleteClick()">
+        Delete Item
+      </button>
+    </div>
 
-<p> {{ itemInfo.value }}</p>
-
-<button (click)="deleteClick()">
-  Delete Item
-</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="auction-title" >Auction Status: None</h1>
+    </div>
+  </div>
+</div>

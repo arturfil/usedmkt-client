@@ -11,7 +11,7 @@ form {
   height: 420px;
   box-sizing: border-box;
   border: 1px solid lightgrey;
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);  
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .signup-form input {
   border: none;
@@ -23,15 +23,15 @@ form {
 .signup-form button {
   margin-top: 20px;
   width: 200px;
-  border-color: white;
+  border: none;
   border-radius: 25px;
-  background-color: crimson;
+  background-color: #329932;
   color: white;
   font-size: 15px;
   height: 40px;
 }
 .signup-form button:hover {
-  background: #efed40;
+  background: #98CC98;
 }
 #fullname-input {
   border: none;

@@ -1,4 +1,29 @@
 img {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 400px;
+}
+h2{
+  margin-top: 20px;
+}
+button {
+  background-color: crimson;
+  color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  width: 100px;
+}
+.img {
+}
+.details {
+  margin-top: 130px;
+}
+.info {
+
+}
+.desc {
+  margin-top: 40px;
+}
+.auction-title {
+  text-align: center;
+  margin-top: 50px;
 }

@@ -4,7 +4,8 @@ h2 {
 }
 img {
   height: 150px;
-  width: 150px;
+  width: auto;
+  max-width: 220px;
   margin: 30px 0;
   vertical-align: bottom;
 }
