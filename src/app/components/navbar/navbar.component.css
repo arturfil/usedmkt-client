@@ -2,9 +2,11 @@ nav {
   background-color: #411D39;
   color: white;
 }
-
 nav a {
   color: white;
+}
+.navbar-brand:visited {
+  color: lightgrey;
 }
 .username {
   padding-top: 5px;
@@ -21,5 +23,5 @@ nav a {
   color: white;
 }
 .link a:visited {
-  color: white;
+  color: whitesmoke;
 }

@@ -9,7 +9,9 @@
       <h2> {{ itemInfo.name }}</h2>
       <p> Brand or Made: {{ itemInfo.brand }} </p>
       <p> ${{ itemInfo.value }}.00</p>
-      <button class="auction-button" (click)="itemThang.startAuction()">
+
+      <!-- class="auction-button" (click)="itemThang.startAuction()" --> <!-- this is what the button should do -->
+      <button class="auction-button" (click)="informAuction()">
         Start Auction
       </button>
       <h3>Description: </h3>
@@ -21,12 +23,13 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <h1 *ngIf="itemInfo.status" class="auction-title" > Auction In Procces </h1>
+      <h1 *ngIf="itemInfo.status" class="auction-title" > Auction In Process </h1>
     </div>
 
     <div *ngIf="itemInfo.status" class="counter-section" >
-      <h2>Time left: <span>{{ timeLeft }}</span></h2>
+      <h2>Time left: <span>{{ 'itemInfo.finalDate //current Date' }}</span></h2>
       <h2>Bids:{{ itemThang.counter }}</h2>
+      <input type="text" name="" value="">
       <button (click)="itemThang.increaseBidNum()"> Make A Bid </button>
     </div>
   </div>

@@ -22,7 +22,6 @@ import { ItemFormComponent } from './components/item-form/item-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
-import { MakePaymentComponent } from './components/make-payment/make-payment.component';
 import { StripeFormComponent } from './components/stripe-form/stripe-form.component';
 
 @NgModule({
@@ -37,7 +36,6 @@ import { StripeFormComponent } from './components/stripe-form/stripe-form.compon
     NavbarComponent,
     LoginComponent,
     AccountComponent,
-    MakePaymentComponent,
     StripeFormComponent
   ],
   imports: [

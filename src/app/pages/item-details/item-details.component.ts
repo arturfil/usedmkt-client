@@ -44,6 +44,18 @@ export class ItemDetailsComponent implements OnInit {
       );
   }
 
+  informAuction() {
+    console.log("Inform Service")
+    this.itemThang.startAuction(this.itemInfo._id).subscribe(
+      (item) => {
+        console.log("Item retrieved succesfully")
+        console.log(item)
+
+        this.itemInfo = item;
+      }
+    )
+  }
+
   deleteClick() {
     this.itemThang.deleteItem(this.itemInfo._id)
       .subscribe(

@@ -51,7 +51,7 @@ export class ItemApiService {
   }
 
   startAuction(itemId: string) {
-      return this.httpThang.patch(
+      return this.httpThang.put(
         this.baseUrl + '/api/items/auction/' + itemId,
         {},
         {withCredentials: true}

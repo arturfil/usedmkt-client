@@ -4,8 +4,10 @@
 <form class="signup-form"(ngSubmit)="saveNewItem() ">
   <label for="item-name-input"> New Item Name </label>
   <br>
+
+  <!-- Need to add this --> <!-- || (keydown)="getQuery(queryInput)" --> 
   <input id="item-name-input" type="text"
-  name="itemName" (keydown)="getQuery(queryInput)" [(ngModel)]="queryInput"[(ngModel)]="newItem.itemName">
+  name="itemName" [(ngModel)]="queryInput"[(ngModel)]="newItem.itemName">
   <br>
 
   <label for="item-brand-input"> Brand </label>
