@@ -1,5 +1,5 @@
 img {
-  height: 300px;
+  height: 250px;
   width: 400px;
 }
 h2{
@@ -26,4 +26,7 @@ button {
 .auction-title {
   text-align: center;
   margin-top: 50px;
+}
+.auction-button {
+  background-color: #329932;
 }

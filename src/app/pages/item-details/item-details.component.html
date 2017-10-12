@@ -9,6 +9,9 @@
       <h2> {{ itemInfo.name }}</h2>
       <p> Brand or Made: {{ itemInfo.brand }} </p>
       <p> ${{ itemInfo.value }}.00</p>
+      <button class="auction-button" (click)="itemThang.startAuction()">
+        Start Auction
+      </button>
       <h3>Description: </h3>
       <button (click)="deleteClick()">
         Delete Item
@@ -18,7 +21,13 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <h1 class="auction-title" >Auction Status: None</h1>
+      <h1 *ngIf="itemInfo.status" class="auction-title" > Auction In Procces </h1>
+    </div>
+
+    <div *ngIf="itemInfo.status" class="counter-section" >
+      <h2>Time left: <span>{{ timeLeft }}</span></h2>
+      <h2>Bids:{{ itemThang.counter }}</h2>
+      <button (click)="itemThang.increaseBidNum()"> Make A Bid </button>
     </div>
   </div>
 </div>

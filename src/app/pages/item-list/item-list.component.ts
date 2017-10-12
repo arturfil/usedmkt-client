@@ -21,6 +21,7 @@ export class ItemListComponent implements OnInit {
   prices: any[];
   userInfo: any;
   queryInput: any;
+  auctionStatus = false;
 
   constructor(
     private itemThang: ItemApiService,

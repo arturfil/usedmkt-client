@@ -37,7 +37,7 @@
           (newItemNotifier)="handleNewItem($event)"></app-item-form>
         </div>
 
-        <ul>
+        <ul *ngIf="!isFormOn">
           <li class="col-md-3 col-sm-3 item-card" *ngFor="let oneItem of myItems">
             <img [src]="imageDomain + oneItem.image" alt="">
             <h3> {{ oneItem.name}}</h3>
@@ -45,6 +45,7 @@
             <a [routerLink]="['/items', oneItem._id]">
               See Details
             </a>
+            <p *ngIf="itemThang.auctionStatus"> Auction In Process </p>
           </li>
         </ul>
 

@@ -31,7 +31,7 @@
             <a class="see-details" [routerLink]="['/items', oneItem._id]">
               See Details
             </a>
-
+            <p *ngIf="oneItem.status">In Auction </p>
           </li>
         </ul>
       </div>
@@ -40,6 +40,9 @@
 
   <div class="show-items row">
     <div class="col-md-12">
+
+      <!-- this form searches for walmart products, prices, images and more -->
+
       <form class="form-query" (ngSubmit)='querySubmit()' >
         <label for="search-input"> Search Item Price </label>
         <br>
@@ -48,6 +51,7 @@
         <br>
         <button> Search </button>
       </form>
+
     </div>
   </div>
   <div class="row">

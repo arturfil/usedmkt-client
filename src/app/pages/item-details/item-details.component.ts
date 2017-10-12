@@ -11,9 +11,11 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./item-details.component.css']
 })
 export class ItemDetailsComponent implements OnInit {
+
   imageDomain = environment.apiUrl;
   itemInfo: any = {};
   userInfo: any;
+  counter: number = 0;
 
   constructor(
     private activatedThang: ActivatedRoute,
@@ -50,4 +52,5 @@ export class ItemDetailsComponent implements OnInit {
         }
       )
   }
+
 }
