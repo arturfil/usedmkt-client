@@ -59,9 +59,9 @@
       <div class="row">
 
         <div class="">
-          <h2 *ngIf="onePrice"> Walmart's Recomendations </h2>
           <ul>
             <li class="item-card col-md-3 col-sm-3" *ngFor="let onePrice of prices">
+              <h5 *ngIf="onePrice"> Walmart's Recomendations </h5>
               <img src="{{ onePrice.mediumImage}}" alt="">
               <p>Name: {{ onePrice.name }}</p>
               <p>Price: ${{ onePrice.salePrice }}</p>

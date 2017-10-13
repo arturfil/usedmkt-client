@@ -9,6 +9,7 @@ import { ItemApiService } from './services/item-api.service';
 import { AuthApiService } from './services/auth-api.service';
 import { NeedsLoginGuardService } from './guards/needs-login-guard.service';
 import { WalmartApiService } from './services/walmart-api.service';
+import { UserInfoService } from './services/user-info.service';
 
 // components
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
 import { StripeFormComponent } from './components/stripe-form/stripe-form.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     LoginComponent,
     AccountComponent,
     StripeFormComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ItemApiService,
     AuthApiService,
     WalmartApiService,
-    NeedsLoginGuardService
+    NeedsLoginGuardService,
+    UserInfoService
   ],
   bootstrap: [AppComponent]
 })
