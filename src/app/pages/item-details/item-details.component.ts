@@ -11,6 +11,7 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./item-details.component.css']
 })
 export class ItemDetailsComponent implements OnInit {
+now = new Date()
 
   imageDomain = environment.apiUrl;
   itemInfo: any = {};
@@ -44,6 +45,18 @@ export class ItemDetailsComponent implements OnInit {
           }
         }
       );
+  }
+
+  auctionEnded() {
+    var today = new Date;
+    if (!this.itemInfo || !this.itemInfo.finalDate) {
+      return false;
+    }
+    if (today > this.itemInfo.finalDate) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   informAuction() {

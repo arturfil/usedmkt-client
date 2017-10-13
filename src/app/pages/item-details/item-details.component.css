@@ -30,3 +30,16 @@ button {
 .auction-button {
   background-color: #329932;
 }
+.auction-box {
+  border: solid 1px lightgrey;
+  padding: 10px 40px 60px 40px;
+  margin-top: 40px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.auction-form {
+  text-align: center;
+}
+.auction-form input{
+  width: 300px;
+}

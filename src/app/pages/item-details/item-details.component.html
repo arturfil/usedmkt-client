@@ -21,19 +21,26 @@
     </div>
 
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <h1 *ngIf="itemInfo.status" class="auction-title" > Auction In Process </h1>
-    </div>
 
-    <div *ngIf="itemInfo.status" class="counter-section" >
-      <h2>Auction Finishes At: <span>{{ itemInfo.finalDate | date:'medium' }}</span></h2>
-      <h2>Current Bid Price: ${{ itemInfo.auctionVal}}</h2>
-      <h2>Bids:{{ itemThang.counter }}</h2>
-      <form (ngSubmit)="informBid()">
-        <input [(ngModel)]="bidValue" type="text" name="bidVal">
-        <button> Make A Bid </button>
-      </form>
+  <div class="auction-box" *ngIf="itemInfo.status">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 *ngIf="itemInfo.status && !auctionEnded()" class="auction-title" > Auction In Process </h1>
+      </div>
+
+      <div *ngIf="itemInfo.status && !auctionEnded()" class="counter-section" >
+        <h2>Auction Finishes At: <span>{{ itemInfo.finalDate | date:'medium' }}</span></h2>
+        <h2>Current Bid Price: ${{ itemInfo.auctionVal}}</h2>
+        <form class="auction-form"(ngSubmit)="informBid()">
+          <input [(ngModel)]="bidValue" type="text" name="bidVal">
+          <button> Make A Bid </button>
+        </form>
+      </div>
+    </div>
+    <div class="" *ngIf="auctionEnded()">
+      <h2>Auction Ended, Item is not available</h2>
     </div>
   </div>
+
 </div>
+<app-footer></app-footer>
