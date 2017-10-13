@@ -2,7 +2,6 @@
   <p> Hi {{ userInfo.fullName }}</p>
 </div> -->
 
-<h2> Featured Products </h2>
 <!-- <div *ngIf="userInfo">
   <button (click)="showsForm()">
     Add Item
@@ -14,7 +13,12 @@
 </div> -->
 
   <div class="container">
-
+    <div class="row">
+      <h2> Featured Products </h2>
+      <div class="col-md-12 col-sm-12">
+        <app-carousel></app-carousel>
+      </div>
+    </div>
     <div class="row">
       <div class="">
         <ul class="">

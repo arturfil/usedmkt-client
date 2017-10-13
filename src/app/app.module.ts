@@ -23,6 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
 import { StripeFormComponent } from './components/stripe-form/stripe-form.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StripeFormComponent } from './components/stripe-form/stripe-form.compon
     NavbarComponent,
     LoginComponent,
     AccountComponent,
-    StripeFormComponent
+    StripeFormComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

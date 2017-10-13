@@ -6,6 +6,8 @@ import { WalmartApiService } from '../../services/walmart-api.service';
 
 import { environment } from '../../../environments/environment';
 
+import { CarouselComponent } from '../../components/carousel/carousel.component'; 
+
 
 @Component({
   selector: 'app-item-list',
