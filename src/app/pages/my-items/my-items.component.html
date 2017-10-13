@@ -29,7 +29,7 @@
         <div class="col-md-3">
           <h2> Your Inventory </h2>
         </div>
-        
+
       </div>
       <div class="row">
         <div class="add-items-form col-md-12">
@@ -59,11 +59,12 @@
       <div class="row">
 
         <div class="">
+          <h2 *ngIf="onePrice"> Walmart's Recomendations </h2>
           <ul>
-            <li class="col-md-3 col-sm-3" *ngFor="let onePrice of prices">
+            <li class="item-card col-md-3 col-sm-3" *ngFor="let onePrice of prices">
+              <img src="{{ onePrice.mediumImage}}" alt="">
               <p>Name: {{ onePrice.name }}</p>
               <p>Price: ${{ onePrice.salePrice }}</p>
-              <img src="{{ onePrice.mediumImage}}" alt="">
             </li>
           </ul>
         </div>
