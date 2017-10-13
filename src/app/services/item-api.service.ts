@@ -42,14 +42,8 @@ export class ItemApiService {
   //---------------------------------
   // Methods to start the auction
 
-  //patch /api/items/ID
-  itemStatus(itemId: string) {
-    return this.httpThang.patch(
-      this.baseUrl + '/api/items/' + itemId,
-      { withCredentials: true}
-    )
-  }
 
+  //PUT /api/items/auction/ ID
   startAuction(itemId: string) {
       return this.httpThang.put(
         this.baseUrl + '/api/items/auction/' + itemId,
@@ -57,7 +51,16 @@ export class ItemApiService {
         {withCredentials: true}
       )
       //time left = (start-date) - (current-date)
-    }
+  }
+
+  //PUT /api/items/bid/ ID
+  submitBid(itemId: string, bidAmount: number) {
+    return this.httpThang.put(
+      this.baseUrl + '/api/items/bid/' + itemId,
+      {bidAmount},
+      {withCredentials: true}
+    )
+  }
 
   increaseBidNum() {
     this.counter += 1;

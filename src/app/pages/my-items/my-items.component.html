@@ -2,7 +2,6 @@
   {{ errorMessage }}
 </p>
 
-  <h2> Your Inventory </h2>
 
   <div class="error" *ngIf="errorMessage">
     <h3> {{ errorMessage }}</h3>
@@ -26,6 +25,12 @@
 
 
     <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2> Your Inventory </h2>
+        </div>
+        
+      </div>
       <div class="row">
         <div class="add-items-form col-md-12">
           <button class="add-button" (click)="showsForm()">

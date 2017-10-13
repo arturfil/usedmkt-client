@@ -26,7 +26,7 @@ export class ItemFormComponent implements OnInit {
     itemName: '',
     itemBrand: '',
     itemImage: '',
-    itemValue: 0
+    itemValue: null
   }
   queryInput: string;
   errorMessage: string;

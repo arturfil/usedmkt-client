@@ -28,7 +28,8 @@ export class MyItemsComponent implements OnInit {
 
   constructor(
     private itemThang: ItemApiService,
-    private wallThang: WalmartApiService
+    private wallThang: WalmartApiService,
+    private authThang: AuthApiService
   ) { }
 
   ngOnInit() {
@@ -45,7 +46,7 @@ export class MyItemsComponent implements OnInit {
           }
         }
       )
-  }
+  } 
 
   showsForm() {
     if (this.isFormOn) {

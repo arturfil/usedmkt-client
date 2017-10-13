@@ -15,7 +15,9 @@ export class ItemDetailsComponent implements OnInit {
   imageDomain = environment.apiUrl;
   itemInfo: any = {};
   userInfo: any;
-  counter: number = 0;
+  counter: number = null;
+  bidValue: number = null;
+  bids: any;
 
   constructor(
     private activatedThang: ActivatedRoute,
@@ -54,6 +56,19 @@ export class ItemDetailsComponent implements OnInit {
         this.itemInfo = item;
       }
     )
+  }
+
+  informBid() {
+    console.log(this.bidValue);
+    this.itemThang.submitBid(this.itemInfo._id, this.bidValue)
+      .subscribe(
+        (itemFromApi: any) => {
+          this.itemInfo = itemFromApi
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
   }
 
   deleteClick() {

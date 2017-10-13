@@ -17,6 +17,7 @@
 
       <ul *ngIf="userInfo" class="navbar-nav nav ">
         <li class="nav-item name"><p> Hello, {{ userInfo.fullName }}</p></li>
+
       </ul>
 
     </div>
@@ -30,8 +31,9 @@
 
 
         <li class="link nav-item"><a *ngIf="userInfo" routerLink="/myItems"> My Inventory </a></li>
-        <li class="link nav-item"><a *ngIf="userInfo" routerLink="/account"> My Account </a></li>        
+        <li class="link nav-item"><a *ngIf="userInfo" routerLink="/account"> My Account </a></li>
         <li class="link nav-item"><a *ngIf="userInfo" href=""(click)="logMeOut()"> Log Out </a></li>
+        <li *ngIf="userInfo" class="nav-item name">$<span class="coin"><span>{{ userInfo.credits }}</span></span></li>
       </ul>
     </div>
   </div>
